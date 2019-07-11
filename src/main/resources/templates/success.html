@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>成功</h1>
+<div id="div01" class="myDiv" th:id="${name}" th:class="${name}" th:text="${name}">
+    此处显示内容
+</div>
+<span th:text="${#locale.country}"></span>
+
+<hr/>
+<div th:text="${name}"></div>
+<div th:utext="${name}"></div>
+<hr/>
+
+<h4 th:text="${user}" th:each="user:${users}"></h4>
+<hr/>
+<h4>
+    <span th:each="user:${users}">[[${user}]]</span>
+</h4>
+
+</body>
+</html>
